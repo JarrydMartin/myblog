@@ -12,3 +12,9 @@ Adding TypeScript:
 `new-item tsconfig.js`
 
 `npm install --save-dev typescript @types/react @types/node`
+
+vercel.com was so easy 👌 
+
+Authentication with Auth0 https://youtu.be/Rm9-tFFQH8E?list=PLZ14qQz3cfJJOcbbVi_nVEPqC2334LLMz
+
+`npm install @auth0/nextjs-auth0`
