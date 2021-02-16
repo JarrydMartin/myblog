@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import {useUser} from '@auth0/nextjs-auth0';
 
@@ -7,20 +5,13 @@ import {useUser} from '@auth0/nextjs-auth0';
 export default function Home() {
     const {user, isLoading, error} = useUser();
 
-    if (isLoading) 
-        return <Loading/>;
+    if (isLoading) return <Loading/>;
     
-
-    if (error) 
-        return <Error/>
+    if (error) return <Error/>
 
     return (
-        <div className={
-            styles.container
-        }>
-            {
-            user ? <LogoutButton/>: <LoginButton/>
-        }
+        <div>
+            {user ? <LogoutButton/>: <LoginButton/>}
             <h1>Coming Soon...</h1>
             <Image src="/Charco/Charco/Coming_soon.png"
                 width={500}
@@ -43,9 +34,7 @@ function LogoutButton() {
 
 function Loading() {
     return (
-        <div className={
-            styles.container
-        }>
+        <div>
             <Image src="/Charco/Charco/Waiting.png"
                 width={500}
                 height={500}/>
