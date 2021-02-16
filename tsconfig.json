@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/api/login.js"  ],
+, "pages/api/login.js", "pages/api/auth/[...auth0].tsx", "pages/api/auth/[...auth0].tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -17,4 +17,6 @@ vercel.com was so easy 👌
 
 Authentication with Auth0 https://youtu.be/Rm9-tFFQH8E?list=PLZ14qQz3cfJJOcbbVi_nVEPqC2334LLMz
 
+https://github.com/auth0/nextjs-auth0
+
 `npm install @auth0/nextjs-auth0`
