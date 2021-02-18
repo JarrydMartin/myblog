@@ -1,17 +1,18 @@
 import dynamic from 'next/dynamic';
 import React, { useContext } from 'react'
 import { BlogContext } from '../lib/contexts'
-const Editor = dynamic(() => import("../components/Editor"), { ssr: false });
+import BlogForm from './BlogForm';
+const Editor = dynamic(() => import("./Editor"), { ssr: false });
 
-const CreateBlog = () => {
+const EditBlog = () => {
     const {blog, setBlog} = useContext(BlogContext);
 
-    
     return (
         <div>
+            <BlogForm />
             <Editor />  
         </div>
     )
 }
 
-export default CreateBlog
+export default EditBlog
