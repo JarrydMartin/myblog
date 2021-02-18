@@ -4,6 +4,7 @@ import { Blog } from "../../models/Blog";
 import { BlogContext } from "../../lib/contexts";
 import EditBlog from "../../components/EditBlog";
 import axios from "axios";
+import { Button } from '@material-ui/core';
 
 const create = () => {
   const [blog, setBlog] = useState<Blog>(null);
@@ -20,7 +21,7 @@ const create = () => {
   return (
     <BlogContext.Provider value={{ blog, setBlog }}>
       <EditBlog />
-      <button type="submit" onClick={handleCreate}>Create</button>
+      <Button color="primary" onClick={handleCreate}> Create </Button>
     </BlogContext.Provider>
   );
 };
