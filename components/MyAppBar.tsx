@@ -27,7 +27,7 @@ const MyAppBar = () => {
        <Grid container spacing={5}>
          <Grid item xs={11}>
         <Typography variant="h6">
-          Open Close Bracket
+          OpenClose Bracket
         </Typography>
         </Grid>
              <Grid item xs={"auto"}>

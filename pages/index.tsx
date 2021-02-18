@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import {useUser} from '@auth0/nextjs-auth0';
+import React from 'react';
+import { Grid } from '@material-ui/core';
 
 
 export default function Home() {
@@ -10,12 +12,17 @@ export default function Home() {
     if (error) return <Error/>
 
     return (
-        <div>
+        <Grid
+  container
+  direction="column"
+  justify="center"
+  alignItems="center"
+>
             <h1>Coming Soon...</h1>
             <Image src="/Charco/Charco/Coming_soon.png"
                 width={500}
                 height={500}/>
-        </div>
+        </Grid>
     )
 }
 
