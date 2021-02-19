@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import { Blog } from "../../models/Blog";
 import { BlogContext } from "../../lib/contexts";
 import EditBlog from "../../components/EditBlog";
 import axios from "axios";
 import { Button } from '@material-ui/core';
+
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const create = () => {
   const [blog, setBlog] = useState<Blog>(null);
@@ -21,7 +23,7 @@ const create = () => {
   return (
     <BlogContext.Provider value={{ blog, setBlog }}>
       <EditBlog />
-      <Button color="primary" onClick={handleCreate}> Create </Button>
+      <Button  onClick={handleCreate}> Create </Button>
     </BlogContext.Provider>
   );
 };
