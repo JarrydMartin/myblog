@@ -1,25 +1,25 @@
+import { List, ListItem } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import useSWR from 'swr';
+import { useBlogs } from '../../lib/useBlogs';
 import { Blog } from '../../models/Blog';
 
-const List = () => {
 
-    const [blogs, setBlogs] = useState<Blog[]>();
+const list = () => {
 
-    async function getBlogs(){
-        const result = await axios.get<Blog[]>('/api/post');
-        setBlogs(result.data);
-    };
-    useEffect(() => {
-        getBlogs();
-    }, [])
+    const {blogs,isLoading} = useBlogs<Blog[]>();
+
+
+    if(isLoading){
+        return <p>Loading...</p>
+    }
+
     return (
-        <div>
-            <pre>
-                {JSON.stringify(blogs, null, 2)}
-            </pre>
-        </div>
+        <List>
+              {blogs.map(blog => <ListItem>{blog.title}</ListItem>)}
+        </List>
     )
 }
 
-export default List
+export default list
