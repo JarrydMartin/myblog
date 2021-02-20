@@ -15,7 +15,7 @@ const EditBlog = () => {
         <BlogForm />
       </div>
       <div className={classes.editor}>
-        <Paper>
+        <Paper elevation={3} style={{background:"#4f5b62"}}>
           <Editor />
         </Paper>
       </div>
@@ -25,7 +25,7 @@ const EditBlog = () => {
 const useStyles = makeStyles({
   root: {
     display: "grid",
-    gridTemplateColumns: "240px auto 240px",
+    gridTemplateColumns: "1fr 2fr 1fr",
     gridTemplateRows: "80px auto",
   },
   form: {
