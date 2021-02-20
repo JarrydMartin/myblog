@@ -3,6 +3,11 @@ import { useUser } from "@auth0/nextjs-auth0";
 import React from "react";
 import { Grid } from "@material-ui/core";
 
+ export async function getStaticProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
 export default function Home() {
   const { isLoading, error } = useUser();
 
@@ -21,6 +26,7 @@ export default function Home() {
 function Loading() {
   return (
     <Grid container direction="column" justify="center" alignItems="center">
+      <h1>Loading...</h1>
       <Image src="/Charco/Charco/Waiting.png" width={500} height={500} />
     </Grid>
   );
