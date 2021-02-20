@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import EditorJs from 'react-editor-js';
 import { EDITOR_JS_TOOLS } from '../lib/constants';
 import { BlogContext } from '../lib/contexts';
@@ -13,12 +13,14 @@ const Editor = () => {
     }
    
     return (
-        <EditorJs 
-            data={blog.data} 
-            tools={EDITOR_JS_TOOLS}
-            instanceRef={instance => editorInstance.current = instance}
-            onChange={handleChange}
-        />
+       
+            <EditorJs 
+                data={blog.data} 
+                tools={EDITOR_JS_TOOLS}
+                instanceRef={instance => editorInstance.current = instance}
+                onChange={handleChange}
+            />
+      
     )
 }
 

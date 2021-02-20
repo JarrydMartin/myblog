@@ -5,14 +5,12 @@ import EditBlog from "../../components/EditBlog";
 import axios from "axios";
 import { Button } from '@material-ui/core';
 
-import { makeStyles } from '@material-ui/core/styles';
-
 
 const create = () => {
   const [blog, setBlog] = useState<Blog>(null);
 
   useEffect(() => {
-    setBlog({_id : null, data: {blocks:[]},title:"New Blog"});
+    setBlog({_id : null, data: {blocks:[]},title:""});
   }, [])
 
   const handleCreate = (e) =>{

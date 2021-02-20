@@ -13,8 +13,11 @@ const BlogForm = () => {
     <TextField
       id="standard-basic"
       label="Title"
+      fullWidth
+      color="secondary"
       value={blog?.title}
       onChange={handleChange}
+      size="medium"
     />
   );
 };
