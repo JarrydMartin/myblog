@@ -15,7 +15,7 @@ const EditBlog = () => {
         <BlogForm />
       </div>
       <div className={classes.editor}>
-        <Paper elevation={3} style={{background:"#4f5b62"}}>
+        <Paper style={{background:"#212121"}} elevation={3} >
           <Editor />
         </Paper>
       </div>

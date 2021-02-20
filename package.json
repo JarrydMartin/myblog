@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.0.0",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@emotion/server": "latest",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@types/mongodb": "^3.6.7",
