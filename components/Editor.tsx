@@ -15,6 +15,7 @@ const Editor = () => {
     return (
        
             <EditorJs 
+            autofocus={true}
                 data={blog.data} 
                 tools={EDITOR_JS_TOOLS}
                 instanceRef={instance => editorInstance.current = instance}

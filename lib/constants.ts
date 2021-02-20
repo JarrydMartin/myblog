@@ -14,18 +14,18 @@ import InlineCode from "@editorjs/inline-code";
 import SimpleImage from "@editorjs/simple-image";
 
 export const EDITOR_JS_TOOLS = {
+  header: Header,
+  list: List,
+  code: Code,
+  inlineCode: InlineCode,
   embed: Embed,
   table: Table,
   marker: Marker,
-  list: List,
-  warning: Warning,
-  code: Code,
   linkTool: LinkTool,
   image: Image,
-  header: Header,
   quote: Quote,
   checklist: CheckList,
   delimiter: Delimiter,
-  inlineCode: InlineCode,
-  simpleImage: SimpleImage
+  simpleImage: SimpleImage,
+  warning: Warning,
 };
