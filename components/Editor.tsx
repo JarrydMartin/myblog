@@ -4,7 +4,7 @@ import { EDITOR_JS_TOOLS } from '../lib/constants';
 import { BlogContext } from '../lib/contexts';
 
 const Editor = () => {
-    const {blog, setBlog} = useContext(BlogContext);
+    const {article: blog, setArticle: setBlog} = useContext(BlogContext);
     const editorInstance = useRef(null);
 
     const handleChange = async () => {

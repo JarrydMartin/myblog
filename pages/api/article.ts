@@ -1,20 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { connectToDatabase } from './util/mongodb' ;
-import { Post } from '../../models/Post';
+import { connectToDatabase } from './util/mongodb';
+import { Article } from '../../models/Article';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { db }= await connectToDatabase();
 
   if (req.method == 'POST'){
     const postid = await (await 
-        db.collection<Post>("posts")
+        db.collection<Article>("posts")
           .insertOne(req.body)).insertedId;
     return res.json(postid);
   }
 
   if (req.method == 'GET'){
       const posts = await db
-        .collection<Post>("posts")
+        .collection<Article>("posts")
         .find({})
         // .sort({})
         // .limit(20)

@@ -6,7 +6,7 @@ import BlogForm from "./BlogForm";
 const Editor = dynamic(() => import("./Editor"), { ssr: false });
 
 const EditBlog = () => {
-  const { blog, setBlog } = useContext(BlogContext);
+  const { article: blog, setArticle: setBlog } = useContext(BlogContext);
   const classes = useStyles();
 
   return (

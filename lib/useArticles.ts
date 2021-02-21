@@ -3,10 +3,10 @@ import useSWR from "swr"
 
 const fetcher = url => axios.get(url).then(res => res.data);
 
-export function useBlogs<T> () {
-  const { data, error } = useSWR<T>(`/api/post`, fetcher)
+export function useArticles<T> () {
+  const { data, error } = useSWR<T>(`/api/article`, fetcher)
   return {
-    blogs: data,
+    articles: data,
     isLoading: !error && !data,
     isError: error
   }

@@ -23,6 +23,7 @@ const MyAppBar = () => {
       </a>
     );
   }
+
   return (
     <AppBar position="static">
       <Toolbar className={`${shadowGlowStyle.shadowGlow} ${classes.container}`}>

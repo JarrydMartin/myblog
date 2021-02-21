@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { BlogContext } from "../lib/contexts";
 
 const BlogForm = () => {
-  const { blog, setBlog } = useContext(BlogContext);
+  const { article: blog, setArticle: setBlog } = useContext(BlogContext);
   const classes = useStyles();
 
   const handleChange = (e) => {

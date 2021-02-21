@@ -1,4 +1,4 @@
 import { createContext, Dispatch } from "react";
-import { Blog } from "../models/Blog";
+import { Article } from "../models/Article";
 
-export const BlogContext = createContext<{blog:Blog, setBlog: Dispatch<Blog>}>(null);
+export const BlogContext = createContext<{article:Article, setArticle: Dispatch<Article>}>(null);

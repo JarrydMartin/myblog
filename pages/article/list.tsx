@@ -4,15 +4,13 @@ import {
   ListItem,
   ListItemSecondaryAction,
 } from "@material-ui/core";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import useSWR from "swr";
-import { useBlogs } from "../../lib/useBlogs";
-import { Blog } from "../../models/Blog";
+import { useArticles } from "../../lib/useArticles";
+import { Article } from "../../models/Article";
 import EditIcon from "@material-ui/icons/Edit";
 
 const list = () => {
-  const { blogs, isLoading } = useBlogs<Blog[]>();
+  const { articles, isLoading } = useArticles<Article[]>();
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -20,10 +18,10 @@ const list = () => {
 
   return (
     <List>
-      {blogs.map((blog) => {return (
+      {articles.map((article) => {return (
         <ListItem>
-          {blog.title}
-          <a href={`${blog._id}`}>
+          {article.title}
+          <a href={`${article._id}`}>
             <ListItemSecondaryAction>
                 <IconButton edge="end" aria-label="edit">
                 <EditIcon />
